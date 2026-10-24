@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="RealTimeHub.Api/RealTimeHub.Api.csproj" />
+  <Project Path="RealTimeHub.Application/RealTimeHub.Application.csproj" />
+  <Project Path="RealTimeHub.Domain/RealTimeHub.Domain.csproj" />
+  <Project Path="RealTimeHub.Infrastructure/RealTimeHub.Infrastructure.csproj" />
+</Solution>

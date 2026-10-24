@@ -1,0 +1,60 @@
+# EditorConfig configuration for .NET & C#
+root = true
+
+# All files
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+end_of_line = crlf
+
+# Markdown files
+[*.md]
+trim_trailing_whitespace = false
+
+# C# Code Styling Rules
+[*.cs]
+# Indentation and braces
+csharp_indent_braces = false
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+
+# Nullable reference types
+dotnet_diagnostic.CS8600.severity = warning
+dotnet_diagnostic.CS8602.severity = warning
+dotnet_diagnostic.CS8603.severity = warning
+
+# Naming Conventions
+# Private fields must start with underscore: _fieldName
+dotnet_naming_rule.private_fields_with_underscore.symbols = private_fields
+dotnet_naming_rule.private_fields_with_underscore.style = camel_case_with_underscore
+dotnet_naming_rule.private_fields_with_underscore.severity = suggestion
+
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+
+dotnet_naming_style.camel_case_with_underscore.capitalization = camel_case
+dotnet_naming_style.camel_case_with_underscore.required_prefix = _
+
+# Types, methods, properties must be PascalCase
+dotnet_naming_rule.types_and_members_must_be_pascal_case.symbols = types_and_members
+dotnet_naming_rule.types_and_members_must_be_pascal_case.style = pascal_case
+dotnet_naming_rule.types_and_members_must_be_pascal_case.severity = suggestion
+
+dotnet_naming_symbols.types_and_members.applicable_kinds = class, struct, interface, enum, property, method, event
+dotnet_naming_symbols.types_and_members.applicable_accessibilities = public, internal, protected
+
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+# Interfaces must start with 'I'
+dotnet_naming_rule.interfaces_must_start_with_i.symbols = interface_symbols
+dotnet_naming_rule.interfaces_must_start_with_i.style = prefix_i
+dotnet_naming_rule.interfaces_must_start_with_i.severity = warning
+
+dotnet_naming_symbols.interface_symbols.applicable_kinds = interface
+dotnet_naming_style.prefix_i.required_prefix = I
+dotnet_naming_style.prefix_i.capitalization = pascal_case
